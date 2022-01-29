@@ -1,9 +1,10 @@
 {
-  "name": "custom-extension",
+  "name": "mjml-to-html-jsreport-recipe",
   "version": "0.0.0",
-  "description": "jsreport studio extension starter kit",
+  "description": "jsreport studio extension to convert mjml to html",
   "keywords": [
-    "jsreport"
+    "jsreport",
+    "mjml"
   ],
   "scripts": {
     "build": "jsreport-studio-build",
@@ -22,8 +23,10 @@
     }
   },
   "license": "MIT",
-  "dependencies": {},
-  "author": "Jan Blaha",
+  "dependencies": {
+    "mjml": "4.12.0"
+  },
+  "author": "Mohamed El-Refaie",
   "devDependencies": {
     "@jsreport/studio-dev": "3.0.1",
     "standard": "16.0.3"

@@ -1,11 +1,26 @@
-# jsreport-extension-starter-kit
+# jsreport-mjml-to-html
 
-*This is starter kit for the jsreport 3. When looking for older jsreport 2, please checkout branch 2.0.0*
+jsreport recipe transforming mjml to hmtl using node package [mjml](https://github.com/mjmlio/mjml).
 
- **Quickly start developing jsreport custom extensions by downloading this project**
+## Installation
 
-1. git clone https://github.com/jsreport/jsreport-extension-starter-kit.git
-2. npm install
-3. npm start
+> **npm install jsreport-mjml-to-html**
 
-Documentation for extending jsreport studio can be found [here](http://jsreport.net/learn/extending-studio)
+## Usage
+
+To use `recipe` in for template rendering set `template.recipe=mjml-to-html` in the rendering request.
+
+```js
+{
+  template: { content: '...', recipe: 'mjml-to-html', engine: '...' }
+}
+```
+
+## jsreport-core
+
+You can apply this extension also manually to [jsreport-core](https://github.com/jsreport/jsreport-core)
+
+```js
+var jsreport = require("jsreport-core")();
+jsreport.use(require("jsreport-mjml-to-html")());
+```
