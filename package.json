@@ -1,7 +1,7 @@
 {
-  "name": "mjml-to-html-jsreport-recipe",
-  "version": "0.0.0",
-  "description": "jsreport studio extension to convert mjml to html",
+  "name": "jsreport-mjml-to-html",
+  "version": "0.0.1",
+  "description": "jsreport studio recipe converting mjml to html",
   "keywords": [
     "jsreport",
     "mjml"
@@ -11,6 +11,11 @@
     "test": "standard",
     "start": "jsreport-studio-start --httpPort 5488",
     "prepublish": "jsreport-studio-build"
+  },
+  "homepage": "https://github.com/mrefaie/jsreport-mjml-to-html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrefaie/jsreport-mjml-to-html.git"
   },
   "standard": {
     "ignore": [
@@ -26,7 +31,10 @@
   "dependencies": {
     "mjml": "4.12.0"
   },
-  "author": "Mohamed El-Refaie",
+  "author": {
+    "name": "Mohamed El-Refaie",
+    "email": "mohgamal@hayasolutions.com"
+  },
   "devDependencies": {
     "@jsreport/studio-dev": "3.0.1",
     "standard": "16.0.3"
