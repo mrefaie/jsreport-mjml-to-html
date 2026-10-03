@@ -1,6 +1,6 @@
 {
   "name": "jsreport-mjml-to-html",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "jsreport studio recipe converting mjml to html",
   "keywords": [
     "jsreport",
@@ -8,9 +8,10 @@
   ],
   "scripts": {
     "build": "jsreport-studio-build",
-    "test": "standard",
+    "test": "mocha test --timeout 15000 && standard",
     "start": "jsreport-studio-start --httpPort 5488",
-    "prepublish": "jsreport-studio-build"
+    "prepublishOnly": "jsreport-studio-build",
+    "test:docker": "node test/docker/run.js"
   },
   "homepage": "https://github.com/mrefaie/jsreport-mjml-to-html",
   "repository": {
@@ -21,28 +22,38 @@
     "ignore": [
       "studio/main.js"
     ],
-    "env": {
-      "node": true,
-      "mocha": true,
-      "browser": true
-    }
+    "env": [
+      "node",
+      "mocha",
+      "browser"
+    ]
   },
   "license": "MIT",
   "dependencies": {
-    "mjml": "4.12.0"
+    "mjml": "5.4.1"
   },
   "author": {
     "name": "Mohamed El-Refaie",
     "email": "mohgamal@hayasolutions.com"
   },
   "devDependencies": {
-    "@jsreport/studio-dev": "3.0.1",
-    "standard": "16.0.3"
+    "@jsreport/jsreport-core": "4.11.2",
+    "@jsreport/jsreport-handlebars": "4.1.1",
+    "@jsreport/studio-dev": "4.1.1",
+    "ajv": "8.20.0",
+    "handlebars": "4.7.9",
+    "mocha": "11.7.5",
+    "should": "13.2.3",
+    "standard": "17.1.2"
   },
   "files": [
     "lib",
     "studio",
     "index.js",
     "jsreport.config.js"
-  ]
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "main": "index.js"
 }
